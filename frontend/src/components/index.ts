@@ -2,3 +2,8 @@ export * from './Navbar';
 export * from './Carousel';
 export * from './Collaborates';
 export * from './Statistics';
+export * from './InfoSection';
+export * from './Supplier';
+export * from './World';
+export * from './Guarantee';
+export * from './Statistics';

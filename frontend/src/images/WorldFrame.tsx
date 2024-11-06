@@ -1,4 +1,4 @@
-import React from '../../public/Frame 1000005639.png';
+import React from '../../public/Frame 1000005638.png';
 
 export const WorldFrame = () => {
   return (

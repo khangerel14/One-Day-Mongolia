@@ -16,3 +16,5 @@ export * from './Check';
 export * from './Exe';
 export * from './File';
 export * from './Truck';
+export * from './Deliver';
+export * from './Plane';
