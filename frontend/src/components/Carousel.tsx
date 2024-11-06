@@ -2,11 +2,11 @@ import { Lightening, WorldFrame } from '@/images';
 
 export const Carousel = () => {
   return (
-    <div className='flex justify-center w-full'>
-      <div className='relative'>
+    <div className='flex justify-center'>
+      <div className='relative w-full bg-cover'>
         <WorldFrame />
-        <div className='absolute inset-0 w-[1440px] mx-auto flex flex-col gap-12'>
-          <h1 className='font-extrabold text-5xl'>
+        <div className='absolute inset-0 w-[1440px] mx-auto flex flex-col gap-12 h-[630px] justify-end'>
+          <h1 className='font-extrabold text-5xl w-[470px] text-white'>
             Монголоос экспорт хийхэд тань бүх талаар тусалъя
           </h1>
           <div className='flex items-center gap-3'>

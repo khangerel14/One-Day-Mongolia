@@ -7,6 +7,9 @@ import {
   Guarantee,
   Statistics,
   Carousel,
+  Examination,
+  Faq,
+  Footer,
 } from '@/components';
 import { Africa } from '@/images/Africa';
 
@@ -20,12 +23,15 @@ export default function Home() {
       <Guarantee />
       <InfoSection />
       <Supplier />
-      <div className='relative inset-0 bg-black h-[1189px] flex items-end w-full'>
-        <div className='absolute top-32 mx-auto w-[1440px]'>
+      <div className='relative inset-0 bg-black h-[1200px] flex items-end bg-cover'>
+        <div className='absolute top-32 mx-auto w-[1440px] inset-0'>
           <World />
         </div>
         <Africa />
       </div>
+      <Examination />
+      <Faq />
+      <Footer />
     </div>
   );
 }

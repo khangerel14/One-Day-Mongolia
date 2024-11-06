@@ -1,6 +1,6 @@
-import React from '../../public/Frame 1000005638.png';
+import React from '../../public/Frame 3991594.png';
 
-export const WorldFrame = () => {
+export const EarlyPic = () => {
   return (
     <div>
       <img src={React.src} alt='' className='bg-cover w-full' />
