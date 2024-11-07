@@ -1,9 +1,9 @@
-import { SocialAccs } from '@/images';
+import { SocialAccs, Telegram } from '@/images';
 
 export const ContactSec = () => {
   return (
     <div className='bg-[#F2F5FC] py-32'>
-      <div className='flex items-start w-[1440px] mx-auto gap-20 justify-between'>
+      <div className='flex items-start container mx-auto gap-20 justify-between'>
         <div className='flex flex-col gap-10 w-[482px]'>
           <h1 className='text-3xl font-extrabold'>Холбоо барих</h1>
           <div className='flex flex-col gap-6'>
@@ -77,8 +77,8 @@ export const ContactSec = () => {
                 placeholder='Placeholder'
               />
             </div>
-            <button className='p-3 px-5 rounded-full bg-[#284CE5] text-white w-fit font-bold'>
-              Илгээх
+            <button className='flex items-center gap-2 p-3 px-5 rounded-full bg-[#284CE5] text-white w-fit font-bold'>
+              Илгээх <Telegram />
             </button>
           </div>
         </form>

@@ -5,8 +5,8 @@ export const Carousel = () => {
     <div className='flex justify-center'>
       <div className='relative w-full bg-cover'>
         <WorldFrame />
-        <div className='absolute inset-0 w-[1440px] mx-auto flex flex-col gap-12 h-[630px] justify-end'>
-          <h1 className='font-extrabold text-5xl w-[470px] text-white'>
+        <div className='absolute inset-0 container mx-auto flex flex-col gap-12 h-full pb-20 justify-end'>
+          <h1 className='font-extrabold text-5xl w-[470px] text-white max-md:text-2xl'>
             Монголоос экспорт хийхэд тань бүх талаар тусалъя
           </h1>
           <div className='flex items-center gap-3'>

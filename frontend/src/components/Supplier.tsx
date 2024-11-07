@@ -1,3 +1,4 @@
+import { Right } from '@/images';
 import { Chat } from '@/images/Chat';
 import { GiveGet } from '@/images/GiveGet';
 import { Meet } from '@/images/Meet';
@@ -33,12 +34,12 @@ const mock = [
 
 export const Supplier = () => {
   return (
-    <div className='bg-[#EAEBFA] h-[771px]'>
-      <div className='flex items-center justify-center w-[1440px] mx-auto flex-col h-full gap-12'>
+    <div className='bg-[#EAEBFA] h-fit py-24'>
+      <div className='flex items-center justify-center container mx-auto flex-col h-full gap-12'>
         <h1 className='text-black font-bold text-4xl'>
           Нийлүүлэгч болох алхамууд
         </h1>
-        <div className='flex justify-between gap-6'>
+        <div className='flex justify-between gap-6 flex-wrap'>
           {mock.map((element, index) => {
             const PictureComponent = element.picture;
             return (
@@ -62,8 +63,9 @@ export const Supplier = () => {
             );
           })}
         </div>
-        <button className='bg-[#284CE5] text-white p-3 px-5 rounded-full'>
+        <button className='flex gap-2 items-center bg-[#284CE5] text-white p-3 px-5 rounded-full'>
           Одоо эхлэе
+          <Right />
         </button>
       </div>
     </div>

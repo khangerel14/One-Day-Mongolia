@@ -38,8 +38,8 @@ export const Examination = () => {
   const [active, setActive] = useState('Байгаль орчин');
   return (
     <div className='bg-white'>
-      <div className='flex flex-col w-[1440px] mx-auto'>
-        <div className='flex flex-col gap-10 w-[711px] m-14'>
+      <div className='flex flex-col container mx-auto'>
+        <div className='flex flex-col gap-10 lg:w-[711px] w-fit m-14'>
           <h1 className='font-bold text-4xl'>
             Ханган нийлүүлэгчийг сонгох шалгуур
           </h1>
@@ -50,7 +50,7 @@ export const Examination = () => {
             нийцүүлэхийн тулд дараахи стандарт, шалгуурыг баримталдаг.
           </p>
         </div>
-        <div className='flex flex-col'>
+        <div className='flex flex-col max-lg:hidden'>
           <div className='flex items-center mx-14'>
             {mock.map((elem, index: number) => {
               return (
@@ -74,7 +74,7 @@ export const Examination = () => {
             className='w-full h-px bg-[#D6D9EB]'
           />
         </div>
-        <div className='flex p-14 justify-between'>
+        <div className='flex p-14 justify-between max-lg:hidden'>
           <div className='flex w-[592px] gap-6'>
             <div className='flex flex-col'>
               <div className='flex flex-col items-center'>

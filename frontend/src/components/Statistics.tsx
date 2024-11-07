@@ -10,19 +10,19 @@ const mock = [
 
 export const Statistics = () => {
   return (
-    <div className='flex items-center bg-[#EAEBFA] justify-center mx-auto h-[158px]'>
-      <div className='flex w-[1440px] items-center justify-between text-[#284CE5] h-[78px] px-10'>
+    <div className='flex items-center bg-[#EAEBFA] justify-center mx-auto py-10 h-fit max-xl:py-24'>
+      <div className='flex container items-center justify-between text-[#284CE5] h-[78px] max-xl:h-60 px-10 flex-wrap max-xl:gap-10'>
         {mock.map((element, index) => {
           return (
             <div key={index} className='flex items-center justify-center'>
-              <div className='text-center w-[260px]'>
+              <div className='text-center w-[260px] max-md:w-40'>
                 <h1 className='font-bold text-4xl'>{element.number}</h1>
                 <p className='text-black'>{element.title}</p>
               </div>
               {index < mock.length - 1 && (
                 <Separator
                   orientation='vertical'
-                  className='h-16 w-px bg-[#D0D4E8]'
+                  className='h-16 w-px bg-[#D0D4E8] max-sm:hidden'
                 />
               )}
             </div>

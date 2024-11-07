@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 export const Navbar = () => {
   const router = useRouter();
   return (
-    <div className='flex items-center justify-between bg-white w-[1440px] h-20 mx-auto'>
+    <div className='flex items-center justify-between bg-white container h-20 mx-auto'>
       <div className='flex items-center'>
         <button onClick={() => router.push('/')}>
           <OneDay />

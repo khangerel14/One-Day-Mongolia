@@ -23,13 +23,13 @@ const mock = [
 
 export const World = () => {
   return (
-    <div className='flex justify-between w-full bg-transparent text-white'>
-      <div className='flex items-center h-96 w-[547px]'>
-        <h1 className='font-extralight text-6xl text-start'>
+    <div className='flex justify-between w-full bg-transparent text-white overflow-hidden max-xl:h-[1000px] max-md:flex-col'>
+      <div className='flex items-center h-96 md:w-[547px] w-fit'>
+        <h1 className='font-extralight text-6xl text-start max-lg:text-4xl'>
           Дэлхий яагаад монголын бүтээгдэхүүнийг сонгох вэ?
         </h1>
       </div>
-      <div className='flex flex-col w-[650px] gap-'>
+      <div className='flex flex-col md:w-[650px] w-fit'>
         {mock.map((element, index: number) => {
           const Icon = element.icon;
           return (

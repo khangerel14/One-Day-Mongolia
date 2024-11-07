@@ -49,7 +49,7 @@ export const Faq = () => {
   return (
     <div className='bg-[#F2F5FC]'>
       <FaqHead />
-      <div className='flex items-center flex-col mx-auto w-[800px] gap-12 pb-60'>
+      <div className='flex items-center flex-col mx-auto container lg:w-[800px] w-fitgap-12 pb-60'>
         <h1 className='text-4xl font-bold'>FAQs</h1>
         <div className='flex flex-col gap-4'>
           {mock.map((elem, index: number) => {

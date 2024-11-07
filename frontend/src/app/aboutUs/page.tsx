@@ -1,4 +1,12 @@
-import { AboutCarousel, FaqHead, Footer, Navbar, Project } from '@/components';
+import {
+  AboutCarousel,
+  Exhibition,
+  FaqHead,
+  Footer,
+  MonProducts,
+  Navbar,
+  Project,
+} from '@/components';
 
 const Page = () => {
   return (
@@ -6,6 +14,8 @@ const Page = () => {
       <Navbar />
       <AboutCarousel />
       <Project />
+      <Exhibition />
+      <MonProducts />
       <FaqHead />
       <Footer />
     </div>

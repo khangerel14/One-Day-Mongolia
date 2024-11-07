@@ -12,5 +12,7 @@ export * from './Faq';
 export * from './Footer';
 export * from './LogIn';
 export * from './FaqHead';
-export * from './Project';
 export * from './AboutCarousel';
+export * from './Project';
+export * from './Exhibition';
+export * from './MonProducts';

@@ -22,7 +22,7 @@ const mock = [
 export const Project = () => {
   return (
     <div className='bg-[#F2F5FC]'>
-      <div className='flex flex-col w-[1440px] mx-auto items-center h-[951px] py-40'>
+      <div className='flex flex-col container mx-auto items-center h-[951px] py-40'>
         <div className='flex flex-col gap-5 items-center w-[908px] text-center'>
           <h1 className='text-lg font-bold text-[#284CE5]'>PROJECT</h1>
           <h2 className='font-bold text-4xl'>“ONE DAY MONGOLIA”</h2>

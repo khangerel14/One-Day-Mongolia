@@ -1,6 +1,6 @@
 import { File, Book, Truck, Check, Bank, Exe } from '@/images';
 
-const mock = [
+const mockss = [
   {
     icon: File,
     desc: 'Экспорт, импортын худалдааны гэрээ ба экспортонд бэлтгэх үйлчилгээ',
@@ -13,9 +13,6 @@ const mock = [
     icon: Truck,
     desc: 'Экспортын тээвэрлэлтийн үйлчилгээ ',
   },
-];
-
-const mockss = [
   {
     icon: Check,
     desc: 'Импортлогч улсын гаалийн дүрэм журмын нийцлийг хангах баримт бичгийн үйлчилгээ',
@@ -32,9 +29,9 @@ const mockss = [
 
 export const Guarantee = () => {
   return (
-    <div className='flex items-center h-[797px] justify-center bg-[#EAEBFA]'>
+    <div className='flex items-center justify-center bg-[#EAEBFA]'>
       <div className='flex flex-col'>
-        <div className='flex flex-col items-center justify-end w-[1440px] text-black h-[188px]'>
+        <div className='flex flex-col items-center justify-end container text-black h-[188px]'>
           <h1 className='font-bold text-4xl'>Бид танд юу өгч чадах вэ?</h1>
           <div className='flex font-semibold text-sm mt-10'>
             <button className='p-1 px-4'>Экспортын цогц үйлчилгээ</button>
@@ -42,21 +39,7 @@ export const Guarantee = () => {
           </div>
           <div className='w-full h-1 rounded-full bg-[#D6D9EB]'></div>
         </div>
-        <div className='flex justify-between flex-wrap w-[1440px] h-[529px] p-14'>
-          {mock.map((element, index: number) => {
-            const IconComponent = element.icon;
-            return (
-              <div
-                className='flex flex-col gap-6 border-[#D2D9F9] border rounded-xl p-8 w-[432px] h-[189px] bg-white'
-                key={index}
-              >
-                <div className='flex justify-center items-center h-14 w-14 rounded-full bg-white shadow-lg border-[#D2D9F9] border'>
-                  <IconComponent />
-                </div>
-                <p className='text-black'>{element.desc}</p>
-              </div>
-            );
-          })}
+        <div className='flex justify-between flex-wrap container mb-20 p-14 gap-3 max-xl:gap-3 mx-auto'>
           {mockss.map((element, index: number) => {
             const IconComponent = element.icon;
             return (
