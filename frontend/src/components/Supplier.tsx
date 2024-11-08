@@ -39,16 +39,16 @@ export const Supplier = () => {
         <h1 className='text-black font-bold text-4xl'>
           Нийлүүлэгч болох алхамууд
         </h1>
-        <div className='flex justify-between gap-6 flex-wrap'>
+        <div className='flex justify-center gap-6 flex-wrap'>
           {mock.map((element, index) => {
             const PictureComponent = element.picture;
             return (
               <div
-                className='flex flex-col gap-40 h-[383px] w-[342px] bg-white rounded-xl p-6 text-center text-black'
+                className='flex flex-col gap-40 h-[383px] w-[342px] bg-white rounded-xl p-6 text-center text-black border border-[#D1D3EB]'
                 key={index}
               >
                 <div className='relative flex items-start'>
-                  <h1 className='text-4xl font-bold text-[#DEE5FF]'>
+                  <h1 className='text-6xl font-black text-[#DEE5FF]'>
                     {element.number}
                   </h1>
                   <div className='absolute inset-0 top-28 flex justify-center items-center'>
@@ -57,7 +57,7 @@ export const Supplier = () => {
                 </div>
                 <div className='flex flex-col justify-end gap-4 p-4 bottom-2'>
                   <h1 className='font-bold text-lg'>{element.title}</h1>
-                  <p>{element.desc}</p>
+                  <p className='font-normal text-sm'>{element.desc}</p>
                 </div>
               </div>
             );

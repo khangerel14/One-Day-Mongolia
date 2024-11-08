@@ -10,7 +10,7 @@ const mock = [
   },
   {
     question:
-      'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
+      'Lorem ipsum dolor sit amet consectetur. Leo adipiscing mauris tempor consequat velit libero. Magna tempor id augue egestas ut interdum.',
     icon: Plus,
   },
   {
@@ -49,7 +49,7 @@ export const Faq = () => {
   return (
     <div className='bg-[#F2F5FC]'>
       <FaqHead />
-      <div className='flex items-center flex-col mx-auto container lg:w-[800px] w-fitgap-12 pb-60'>
+      <div className='flex items-center flex-col mx-auto container lg:w-[800px] w-fit pb-60 gap-12'>
         <h1 className='text-4xl font-bold'>FAQs</h1>
         <div className='flex flex-col gap-4'>
           {mock.map((elem, index: number) => {
@@ -57,7 +57,9 @@ export const Faq = () => {
             return (
               <div key={index} className='flex flex-col'>
                 <div className='flex items-center p-2'>
-                  <h1>{elem.question}</h1>
+                  <h1 className='font-semibold text-[#181B2C]'>
+                    {elem.question}
+                  </h1>
                   <button>
                     <Icoon />
                   </button>

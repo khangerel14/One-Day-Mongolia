@@ -16,3 +16,4 @@ export * from './AboutCarousel';
 export * from './Project';
 export * from './Exhibition';
 export * from './MonProducts';
+export * from './Modal';

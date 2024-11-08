@@ -22,8 +22,8 @@ const mock = [
 export const Project = () => {
   return (
     <div className='bg-[#F2F5FC]'>
-      <div className='flex flex-col container mx-auto items-center h-[951px] py-40'>
-        <div className='flex flex-col gap-5 items-center w-[908px] text-center'>
+      <div className='flex flex-col container mx-auto items-center py-40'>
+        <div className='flex flex-col gap-5 items-center w-fit lg:w-[908px] text-center'>
           <h1 className='text-lg font-bold text-[#284CE5]'>PROJECT</h1>
           <h2 className='font-bold text-4xl'>“ONE DAY MONGOLIA”</h2>
           <p className='text-[#5A5D72] text-base font-normal'>
@@ -33,7 +33,7 @@ export const Project = () => {
             брэндийг бий болгох зорилготойгоор 2021 онд үүсгэн байгуулагдсан.
           </p>
         </div>
-        <div className='flex justify-between items-center mt-20 w-full h-[545px]'>
+        <div className='flex justify-center items-center mt-20 w-full flex-wrap gap-6'>
           {mock.map((elem, index: number) => {
             const Icoon = elem.icon;
             return (
@@ -42,7 +42,7 @@ export const Project = () => {
                 className='flex justify-center items-center flex-col bg-white gap-5 p-6 text-center rounded-xl w-[464px] h-[460px]'
               >
                 <Icoon />
-                <h1>{elem.title}</h1>
+                <h1 className='font-semibold text-xl'>{elem.title}</h1>
                 <p>{elem.desc}</p>
               </div>
             );

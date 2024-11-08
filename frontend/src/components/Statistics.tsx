@@ -15,7 +15,7 @@ export const Statistics = () => {
         {mock.map((element, index) => {
           return (
             <div key={index} className='flex items-center justify-center'>
-              <div className='text-center w-[260px] max-md:w-40'>
+              <div className='text-center md:w-[260px] w-fit'>
                 <h1 className='font-bold text-4xl'>{element.number}</h1>
                 <p className='text-black'>{element.title}</p>
               </div>

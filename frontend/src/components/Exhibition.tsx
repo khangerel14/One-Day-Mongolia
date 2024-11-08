@@ -3,11 +3,11 @@ import { Carous, Location } from '@/images';
 export const Exhibition = () => {
   return (
     <div className='bg-white'>
-      <div className='flex justify-between container items-center mx-auto h-[794px]'>
-        <div className='flex flex-col gap-10 h-[318px] w-[592px] justify-between'>
+      <div className='flex justify-between container items-center mx-auto py-24 max-lg:flex-col gap-20'>
+        <div className='flex flex-col gap-10 h-[318px] lg:w-[592px] w-fit justify-between'>
           <div className='flex flex-col gap-4'>
-            <h1 className='font-bold text-2xl text-[#284CE5]'>Бидний</h1>
-            <h3 className='font-extrabold text-5xl'>үзэсгэлэнгээр зочлоорой</h3>
+            <h1 className='font-bold text-2xl text-[#284CE5]'>БИДНИЙ</h1>
+            <h3 className='font-extrabold text-5xl'>ҮЗЭСГЭЛЭНГЭЭР ЗОЧЛООРОЙ</h3>
           </div>
           <p>
             Бид 2022 онд Унгар улсын Дебрецен хотод Монголын соёл бизнесийн

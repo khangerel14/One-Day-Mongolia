@@ -1,4 +1,4 @@
-import { OneDay, SocialAccs } from '@/images';
+import { Fb, Ins, LinkedIn, Xlink, Yt, OneDay } from '@/images';
 
 export const Footer = () => {
   return (
@@ -10,9 +10,23 @@ export const Footer = () => {
           <button>Үйлчилгээний нөхцөл</button>
           <button>Нууцлалын бодлого</button>
         </div>
-        <button className='max-lg:hidden'>
-          <SocialAccs />
-        </button>
+        <div className='flex items-center w-[232px] h-10 justify-between max-lg:hidden'>
+          <button className='flex justify-center items-center bg-[#F2F5FC] h-10 w-10 rounded-full'>
+            <Fb />
+          </button>
+          <button className='flex justify-center items-center bg-[#F2F5FC] h-10 w-10 rounded-full'>
+            <LinkedIn />
+          </button>
+          <button className='flex justify-center items-center bg-[#F2F5FC] h-10 w-10 rounded-full'>
+            <Xlink />
+          </button>
+          <button className='flex justify-center items-center bg-[#F2F5FC] h-10 w-10 rounded-full'>
+            <Yt />
+          </button>
+          <button className='flex justify-center items-center bg-[#F2F5FC] h-10 w-10 rounded-full'>
+            <Ins />
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -17,36 +17,34 @@ const mock = [
 
 export const MonProducts = () => {
   return (
-    <div className='bg-[#060813] text-white relative inset-0'>
-      <div className='flex items-center container mx-auto h-[685px]'>
-        <div className='flex flex-col w-[845px] h-[438px] justify-between'>
-          <div className='flex flex-col gap-6'>
-            <h1 className='text-5xl w-[528px] font-extrabold'>
-              Монгол бүтээгдэхүүнийг Европоос
-            </h1>
-            <p className='text-lg w-[584px]'>
-              Европын хэрэглэгч нарт зориулсан Монгол брэнд бүхий цахим
-              худалдааны платформыг бий болгосон www.onedayinmongolia.eu
-            </p>
-          </div>
-          <div className='flex justify-between items-center'>
-            {mock.map((elem, index: number) => {
-              return (
-                <div
-                  className='flex justify-center flex-col rounded-lg text-center w-[265px] h-[136px] items-center p-8 border border-white'
-                  key={index}
-                >
-                  <h1 className='font-bold text-4xl text-[#284CE5]'>
-                    {elem.number}
-                  </h1>
-                  <p className='text-base font-normal'>{elem.desc}</p>
-                </div>
-              );
-            })}
-          </div>
+    <div className='bg-[#060813] text-white py-24 flex relative inset-0 gap-10'>
+      <div className='flex flex-col gap-16 container mx-auto'>
+        <div className='flex flex-col gap-6 max-lg:text-center w-full'>
+          <h1 className='lg:text-5xl text-3xl lg:w-[528px] font-extrabold w-full'>
+            Монгол бүтээгдэхүүнийг Европоос
+          </h1>
+          <p className='text-lg w-fit lg:w-[584px]'>
+            Европын хэрэглэгч нарт зориулсан Монгол брэнд бүхий цахим худалдааны
+            платформыг бий болгосон www.onedayinmongolia.eu
+          </p>
+        </div>
+        <div className='flex justify-center items-center gap-6 flex-wrap lg:w-[845px]'>
+          {mock.map((elem, index: number) => {
+            return (
+              <div
+                className='flex justify-center flex-col rounded-lg text-center w-[265px] h-[136px] items-center p-8 border border-[#595A61]'
+                key={index}
+              >
+                <h1 className='font-bold text-4xl text-[#284CE5]'>
+                  {elem.number}
+                </h1>
+                <p className='text-base font-normal'>{elem.desc}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
-      <div className='absolute right-0 top-[75px]'>
+      <div className='flex items-center absolute right-0 bottom-0 w-[600px] max-xl:hidden min-[1280px]:block min-[1601px]:hidden'>
         <Chrome />
       </div>
     </div>
