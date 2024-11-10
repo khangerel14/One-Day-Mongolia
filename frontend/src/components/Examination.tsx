@@ -39,7 +39,7 @@ export const Examination = () => {
   return (
     <div className='bg-white'>
       <div className='flex flex-col container mx-auto'>
-        <div className='flex flex-col gap-10 lg:w-[711px] w-fit m-14'>
+        <div className='flex flex-col gap-10 lg:w-[711px] w-fit sm:m-14 max-sm:p-8'>
           <h1 className='font-bold text-4xl'>
             Ханган нийлүүлэгчийг сонгох шалгуур
           </h1>
@@ -63,16 +63,13 @@ export const Examination = () => {
                     {elem.category}
                   </button>
                   {active === elem.category && (
-                    <Separator className='w-full h-px bg-[#284CE5] mt-4' />
+                    <div className='w-full h-px bg-[#284CE5] mt-4'></div>
                   )}
                 </div>
               );
             })}
           </div>
-          <Separator
-            orientation='horizontal'
-            className='w-full h-px bg-[#D6D9EB]'
-          />
+          <div className='w-full h-px bg-[#D6D9EB]'></div>
         </div>
         <div className='flex p-14 justify-between max-lg:hidden'>
           <div className='flex w-[592px] gap-6'>

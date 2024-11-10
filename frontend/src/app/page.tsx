@@ -10,6 +10,7 @@ import {
   Examination,
   Faq,
   Footer,
+  CarouselSlider,
 } from '@/components';
 import { Africa } from '@/images/Africa';
 
@@ -23,15 +24,18 @@ export default function Home() {
       <Guarantee />
       <InfoSection />
       <Supplier />
-      <div className='relative inset-0 bg-black h-[1200px] flex items-end bg-cover'>
-        <div className='absolute top-32 mx-auto container inset-0'>
-          <World />
+      <div className='bg-black'>
+        <div className='relative inset-0 bg-black h-[1200px] flex items-end bg-cover 2xl:w-[1600px] mx-auto'>
+          <div className='absolute top-32 mx-auto container inset-0'>
+            <World />
+          </div>
+          <Africa />
         </div>
-        <Africa />
       </div>
       <Examination />
       <Faq />
       <Footer />
+      <CarouselSlider />
     </div>
   );
 }

@@ -17,3 +17,5 @@ export * from './Project';
 export * from './Exhibition';
 export * from './MonProducts';
 export * from './Modal';
+export * from './HamburgerBtn';
+export * from './CarouselSlider';

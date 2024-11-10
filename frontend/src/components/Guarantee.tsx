@@ -74,7 +74,7 @@ export const Guarantee = () => {
                 className='flex flex-col gap-6 border-[#D2D9F9] border rounded-xl p-8 w-full md:w-[432px] h-[212px] bg-white'
                 key={index}
               >
-                <div className='flex justify-center items-center h-14 w-14 rounded-full bg-white shadow-lg border-[#D2D9F9] border'>
+                <div className='flex justify-center items-center h-14 w-14 rounded-full bg-white shadow-md border-[#D2D9F9] border'>
                   <IconComponent />
                 </div>
                 <p className='text-black'>{element.desc}</p>

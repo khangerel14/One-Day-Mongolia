@@ -4,17 +4,18 @@ import { Bag, Vector } from '@/images';
 import { Contact } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { HamburgerBtn } from './HamburgerBtn';
 
-export const Modal = () => {
-  const [open, setOpen] = useState(false);
+interface ModalProps {
+  open: boolean;
+  setOpen: () => void;
+}
 
-  const openModal = () => {
-    setOpen(!open);
-    console.log(open);
-  };
+export const Modal = ({ open, setOpen }: ModalProps) => {
   const router = useRouter();
+
   return (
-    <div className='flex w-[300px] flex-col gap-8 font-semibold items-center text-[#284CE5] z-10 bg-slate-500 h-64'>
+    <div className='flex w-[300px] flex-col gap-8 font-semibold items-center text-[#284CE5] z-50 bg-white max-h-screen p-2 mt-60'>
       <button className='flex gap-2 items-center'>
         <Bag /> Дэлгүүрт зочлох
       </button>
@@ -30,7 +31,9 @@ export const Modal = () => {
       >
         <Contact /> Холбоо барих
       </button>
-      <button onClick={openModal}>close</button>
+      <button onClick={setOpen}>
+        <HamburgerBtn />
+      </button>
     </div>
   );
 };
