@@ -2,7 +2,7 @@ import { Down, EarlyPic } from '@/images';
 
 export const AboutCarousel = () => {
   return (
-    <div className='relative bg-cover w-full'>
+    <div className='relative bg-cover w-full 2xl:h-[740px]'>
       <EarlyPic />
       <div className='mx-auto container inset-0 absolute md:pb-28 sm:pb-14 max-md:justify-center h-full flex flex-col justify-end'>
         <div className='flex flex-col text-white h-40 lg:h-[250px] xl:h-[346px] md:w-[468px] w-fit justify-between pb-1 gap-4'>
@@ -12,7 +12,10 @@ export const AboutCarousel = () => {
               Promoting a Genuine Organic and Sustainable Lifestyle
             </h2>
           </div>
-          <button className='flex items-center gap-2 border border-white bg-transparent text-white px-4 py-2 rounded-full w-fit max-sm:px-3 max-sm:text-sm'>
+          <button
+            className='flex items-center gap-2 border border-white bg-transparent text-white text-sm px-4 py-2 rounded-full w-fit max-sm:px-3 max-sm:text-sm'
+            aria-label='Discover more about us'
+          >
             <Down />
             Discover more
           </button>

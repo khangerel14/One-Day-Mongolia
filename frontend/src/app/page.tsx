@@ -10,7 +10,6 @@ import {
   Examination,
   Faq,
   Footer,
-  CarouselSlider,
 } from '@/components';
 import { Africa } from '@/images/Africa';
 
@@ -35,7 +34,6 @@ export default function Home() {
       <Examination />
       <Faq />
       <Footer />
-      <CarouselSlider />
     </div>
   );
 }

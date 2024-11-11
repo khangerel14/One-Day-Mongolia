@@ -8,7 +8,7 @@ export const InfoSection = () => {
           <Plane />
         </div>
         <div className='flex justify-center items-start flex-col w-[592px] gap-8 max-md:w-fit'>
-          <h1 className='font-bold text-4xl text-[#000000]'>
+          <h1 className='font-bold text-4xl text-[#000000] max-sm:text-2xl'>
             Үндэсний үйлдвэрлэлээ дэлхийд түгээх
           </h1>
           <p>
@@ -19,7 +19,7 @@ export const InfoSection = () => {
       </div>
       <div className='flex justify-between container gap-28 max-md:h-full max-md:flex-col-reverse'>
         <div className='flex justify-center items-start flex-col w-[592px] gap-8 max-md:w-fit'>
-          <h1 className='font-bold text-4xl text-[#000000]'>
+          <h1 className='font-bold text-4xl text-[#000000] max-sm:text-2xl'>
             Европ дах хүссэн байршлаасаа эх орныхоо бүтээгдэхүүнийг хүргүүлэн
             авах
           </h1>

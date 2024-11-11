@@ -39,8 +39,8 @@ export const Examination = () => {
   return (
     <div className='bg-white'>
       <div className='flex flex-col container mx-auto'>
-        <div className='flex flex-col gap-10 lg:w-[711px] w-fit sm:m-14 max-sm:p-8'>
-          <h1 className='font-bold text-4xl'>
+        <div className='flex flex-col gap-10 lg:w-[711px] w-fit sm:m-14 max-sm:p-4'>
+          <h1 className='font-bold sm:text-4xl text-2xl'>
             Ханган нийлүүлэгчийг сонгох шалгуур
           </h1>
           <p className='text-[#616161] text-sm'>
@@ -97,7 +97,9 @@ export const Examination = () => {
                 return (
                   <div className='flex flex-col gap-4 h-[231px]' key={index}>
                     <h1 className='font-bold text-2xl'>{element.head}</h1>
-                    <p className='text-[#616161] text-base'>{element.desc}</p>
+                    <p className='text-[#616161] text-base h-[160px] overflow-hidden'>
+                      {element.desc}
+                    </p>
                   </div>
                 );
               })}

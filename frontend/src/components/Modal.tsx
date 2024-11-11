@@ -31,8 +31,8 @@ export const Modal = ({ open, setOpen }: ModalProps) => {
       >
         <Contact /> Холбоо барих
       </button>
-      <button onClick={setOpen}>
-        <HamburgerBtn />
+      <button className='flex gap-2 items-center text-black' onClick={setOpen}>
+        <HamburgerBtn /> Close
       </button>
     </div>
   );

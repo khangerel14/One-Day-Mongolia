@@ -7,7 +7,7 @@ export const Carousel = () => {
   const router = useRouter();
   return (
     <div className='flex justify-center'>
-      <div className='relative w-full bg-cover'>
+      <div className='relative w-full bg-cover 2xl:h-[740px]'>
         <WorldFrame />
         <div className='absolute inset-0 container mx-auto flex flex-col sm:gap-12 gap-5 h-full sm:pb-20 pb-5 justify-end'>
           <h1 className='font-extrabold sm:text-5xl sm:w-[470px] w-fit text-white'>

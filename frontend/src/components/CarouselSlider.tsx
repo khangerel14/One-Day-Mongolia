@@ -1,121 +1,70 @@
-import {
-  CarouselFirst,
-  CarouselTwo,
-  CarouselThree,
-  CarouselFour,
-} from '@/images';
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import CarouselFirst from '@/../public/first.png';
+import CarouselTwo from '@/../public/two.png';
+import CarouselThree from '@/../public/Featured event cover.png';
+import CarouselFour from '@/../public/four.png';
+import { LeftArrow } from '@/images/LeftArrow';
+import { RightArrow } from '@/images/RightArrow';
+
+const images = [CarouselFirst, CarouselTwo, CarouselThree, CarouselFour];
 
 export const CarouselSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
   return (
-    <div
-      id='default-carousel'
-      className='relative w-[500px] h-[500px] bg-slate-400'
-      data-carousel='slide'
-    >
-      <div className='relative h-56 overflow-hidden rounded-lg md:h-96'>
-        <div className='hidden duration-700 ease-in-out' data-carousel-item>
-          <div className='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'>
-            <p>slide 1</p>
-            {/* <CarouselFirst /> */}
+    <div className='md:w-[540px] md:h-[540px] sm:w-[400px] sm:h-[400px] w-[300px] h-[300px]'>
+      <div className='relative h-full w-full overflow-hidden'>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              index === currentIndex
+                ? 'opacity-100 z-10 visible'
+                : 'opacity-0 z-0 invisible'
+            }`}
+            style={{
+              transition: 'opacity 0.7s ease-in-out',
+            }}
+          >
+            <Image
+              src={image}
+              alt={`Carousel Image ${index + 1}`}
+              fill // This replaces layout='fill'
+              style={{ objectFit: 'cover' }} // This replaces objectFit='cover'
+            />
           </div>
-        </div>
-        <div className='hidden duration-700 ease-in-out' data-carousel-item>
-          <div className='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'>
-            <p>slide 2</p>
-            {/* <CarouselTwo /> */}
-          </div>
-        </div>
-        <div className='hidden duration-700 ease-in-out' data-carousel-item>
-          <div className='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'>
-            <p>slide 3</p>
-            {/* <CarouselThree /> */}
-          </div>
-        </div>
-        <div className='hidden duration-700 ease-in-out' data-carousel-item>
-          <div className='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'>
-            <p>slide 4</p>
-            {/* <CarouselFour /> */}
-          </div>
+        ))}
+      </div>
+      <div className='flex justify-between items-center py-5 gap-3'>
+        <div className='h-1 w-full bg-[#C2C2C2] rounded-full'></div>
+        <div className='flex gap-2 items-center'>
+          <button
+            className='border border-[#D1D3EB] rounded-full h-10 w-10 flex justify-center items-center'
+            onClick={handlePrev}
+          >
+            <LeftArrow />
+          </button>
+          <button
+            className='border border-[#D1D3EB] rounded-full h-10 w-10 flex justify-center items-center'
+            onClick={handleNext}
+          >
+            <RightArrow />
+          </button>
         </div>
       </div>
-      <div className='absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse'>
-        <button
-          type='button'
-          className='w-3 h-3 rounded-full'
-          aria-current='true'
-          aria-label='Slide 1'
-          data-carousel-slide-to='0'
-        ></button>
-        <button
-          type='button'
-          className='w-3 h-3 rounded-full'
-          aria-current='false'
-          aria-label='Slide 2'
-          data-carousel-slide-to='1'
-        ></button>
-        <button
-          type='button'
-          className='w-3 h-3 rounded-full'
-          aria-current='false'
-          aria-label='Slide 3'
-          data-carousel-slide-to='2'
-        ></button>
-        <button
-          type='button'
-          className='w-3 h-3 rounded-full'
-          aria-current='false'
-          aria-label='Slide 4'
-          data-carousel-slide-to='3'
-        ></button>
-      </div>
-      <button
-        type='button'
-        className='absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
-        data-carousel-prev
-      >
-        <span className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'>
-          <svg
-            className='w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 6 10'
-          >
-            <path
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d='M5 1 1 5l4 4'
-            />
-          </svg>
-          <span className='sr-only'>Previous</span>
-        </span>
-      </button>
-      <button
-        type='button'
-        className='absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
-        data-carousel-next
-      >
-        <span className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'>
-          <svg
-            className='w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 6 10'
-          >
-            <path
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d='m1 9 4-4-4-4'
-            />
-          </svg>
-          <span className='sr-only'>Next</span>
-        </span>
-      </button>
     </div>
   );
 };

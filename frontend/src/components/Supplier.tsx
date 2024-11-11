@@ -44,7 +44,7 @@ export const Supplier = () => {
             const PictureComponent = element.picture;
             return (
               <div
-                className='flex flex-col gap-40 h-[383px] w-[342px] bg-white rounded-xl p-6 text-center text-black border border-[#D1D3EB]'
+                className='flex flex-col gap-40 sm:h-[383px] sm:w-[342px] h-[400px] w-[300px] bg-white rounded-xl p-6 text-center text-black border border-[#D1D3EB]'
                 key={index}
               >
                 <div className='relative flex items-start'>
