@@ -4,7 +4,7 @@ import { CarouselSlider } from './CarouselSlider';
 export const Exhibition = () => {
   return (
     <div className='bg-white'>
-      <div className='flex justify-between container items-center mx-auto py-24 max-xl:flex-col gap-20'>
+      <div className='flex justify-between container items-center mx-auto py-24 max-xl:flex-col gap-20 xl:h-[800px] h-full'>
         <div className='flex flex-col gap-10 h-[318px] lg:w-[592px] w-fit justify-between'>
           <div className='flex flex-col gap-4'>
             <h1 className='font-bold text-2xl text-[#284CE5]'>БИДНИЙ</h1>

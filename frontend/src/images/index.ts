@@ -44,3 +44,5 @@ export * from './CarouselFirst';
 export * from './CarouselTwo';
 export * from './CarouselThree';
 export * from './CarouselFour';
+export * from './Minus';
+export * from './Hamburger';

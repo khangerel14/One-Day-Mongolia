@@ -47,7 +47,7 @@ export const MonProducts = () => {
           <div className='w-[596px] h-28 max-xl:hidden'></div>
         </div>
       </div>
-      <div className='flex items-center absolute right-0 bottom-0 w-[600px] max-xl:hidden min-[1280px]:block min-[1601px]:hidden'>
+      <div className='flex items-center absolute right-0 bottom-0 w-[600px] max-xl:hidden'>
         <Chrome />
       </div>
     </div>

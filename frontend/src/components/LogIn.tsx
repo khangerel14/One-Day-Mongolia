@@ -14,8 +14,8 @@ export const LogIn = () => {
           <Separator orientation='vertical' className='bg-black h-10' />
           <h1 className='font-medium text-2xl'>Supplier Portal</h1>
         </div>
-        <div className='flex xl:w-[1100px] w-fit h-[720px] rounded-lg bg-cover bg-black'>
-          <div className='relative inset-0 w-[395px] overflow-hidden flex justify-center z-10 bg-cover max-lg:hidden'>
+        <div className='flex xl:w-[1100px] w-fit sm:h-[720px] h-[600px] rounded-lg bg-cover bg-black'>
+          <div className='relative inset-0 w-[395px] overflow-hidden flex justify-center z-10 bg-cover max-lg:hidden rounded-l-lg'>
             <MiniAfrica />
             <div className='absolute top-0 text-white flex flex-col gap-3 p-10'>
               <h1 className='font-bold text-4xl text-start'>
@@ -27,7 +27,7 @@ export const LogIn = () => {
               </p>
             </div>
           </div>
-          <div className='flex justify-center items-center bg-white xl:w-[705px] md:w-[500px] w-fit h-full rounded-r-sm max-md:px-4'>
+          <div className='flex justify-center items-center bg-white xl:w-[705px] md:w-[500px] w-fit h-full rounded-r-lg max-lg:rounded-lg max-md:px-4'>
             <div className='flex flex-col gap-10 items-start md:w-[358px] w-full h-[394px]'>
               <h1 className='text-2xl font-extrabold max-md:text-center w-full'>
                 Нэвтрэх

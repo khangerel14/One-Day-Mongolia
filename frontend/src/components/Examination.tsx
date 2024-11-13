@@ -38,9 +38,9 @@ export const Examination = () => {
   const [active, setActive] = useState('Байгаль орчин');
   return (
     <div className='bg-white'>
-      <div className='flex flex-col container mx-auto'>
-        <div className='flex flex-col gap-10 lg:w-[711px] w-fit sm:m-14 max-sm:p-4'>
-          <h1 className='font-bold sm:text-4xl text-2xl'>
+      <div className='flex flex-col container mx-auto pt-28'>
+        <div className='flex flex-col gap-10 lg:w-[711px] w-fit'>
+          <h1 className='font-bold sm:text-4xl text-3xl'>
             Ханган нийлүүлэгчийг сонгох шалгуур
           </h1>
           <p className='text-[#616161] text-sm'>
@@ -71,7 +71,7 @@ export const Examination = () => {
           </div>
           <div className='w-full h-px bg-[#D6D9EB]'></div>
         </div>
-        <div className='flex p-14 justify-between max-lg:hidden'>
+        <div className='flex sm:p-14 pt-14 justify-between'>
           <div className='flex w-[592px] gap-6'>
             <div className='flex flex-col'>
               <div className='flex flex-col items-center'>
@@ -105,7 +105,7 @@ export const Examination = () => {
               })}
             </div>
           </div>
-          <div>
+          <div className='max-lg:hidden'>
             <YelClothe />
           </div>
         </div>

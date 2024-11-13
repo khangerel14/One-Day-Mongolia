@@ -1,10 +1,9 @@
 'use client';
 
-import { Bag, Contact, OneDay, Vector } from '@/images';
+import { Bag, Contact, Hamburger, OneDay, Vector } from '@/images';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Modal } from './Modal';
-import { HamburgerBtn } from './HamburgerBtn';
 
 export const Navbar = () => {
   const router = useRouter();
@@ -12,28 +11,39 @@ export const Navbar = () => {
 
   const openModal = () => {
     setOpen(!open);
+    console.log(open);
   };
   return (
-    <div className='flex items-center justify-between bg-white container h-20 mx-auto'>
-      <div className='flex items-center'>
-        <button onClick={() => router.push('/')}>
-          <OneDay />
-        </button>
-      </div>
-      {open ? (
-        <Modal open={open} setOpen={openModal} />
-      ) : (
-        <div>
-          <button className='max-md:block md:hidden' onClick={openModal}>
-            <HamburgerBtn />
+    <div>
+      <div className='flex items-center justify-between bg-white container h-20 mx-auto relative inset-0 overflow-hidden'>
+        <div className='flex items-center'>
+          <button onClick={() => router.push('/')}>
+            <OneDay />
           </button>
-          <div className='flex w-[548px] justify-between font-semibold items-center text-[#284CE5] max-md:hidden'>
-            <button className='flex gap-2 items-center text-sm font-semibold'>
+        </div>
+        <div className='flex items-center'>
+          <button className='max-md:block sm:hidden' onClick={openModal}>
+            <Hamburger />
+          </button>
+          <div
+            className='sm:hidden max-md:block w-[85%] fixed top-0 right-0 z-20 transition-transform duration-300'
+            style={{
+              transform: open ? 'translateX(0)' : 'translateX(100%)',
+              transition: 'transform 300ms ease',
+            }}
+          >
+            <Modal open={open} setOpen={openModal} />
+          </div>
+          <div className='flex md:w-[548px] w-[480px] justify-between font-semibold items-center text-[#284CE5] max-sm:hidden'>
+            <button
+              className='flex gap-2 items-center text-sm font-semibold'
+              onClick={() => router.push('/shop')}
+            >
               <Bag /> Дэлгүүрт зочлох
             </button>
             <button
               className='flex gap-2 items-center text-sm font-semibold'
-              onClick={() => router.push('/aboutUs')}
+              onClick={() => router.push('/about-Us')}
             >
               <Vector /> Бидний тухай
             </button>
@@ -45,7 +55,7 @@ export const Navbar = () => {
             </button>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

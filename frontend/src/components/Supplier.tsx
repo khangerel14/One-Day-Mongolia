@@ -36,7 +36,7 @@ export const Supplier = () => {
   return (
     <div className='bg-[#EAEBFA] h-fit py-24'>
       <div className='flex items-center justify-center container mx-auto flex-col h-full gap-12'>
-        <h1 className='text-black font-bold text-4xl'>
+        <h1 className='text-black font-bold text-4xl text-center'>
           Нийлүүлэгч болох алхамууд
         </h1>
         <div className='flex justify-center gap-6 flex-wrap'>

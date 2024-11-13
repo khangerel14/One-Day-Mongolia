@@ -5,7 +5,7 @@ export const FaqHead = () => {
     <div className='bg-[#F2F5FC]'>
       <div className='flex items-center container py-20 h-fit mx-auto max-lg:flex-col'>
         <div className='flex justify-end relative inset-0 w-full max-lg:flex-col max-md:h-[420px] max-lg:h-[800px]'>
-          <div className='absolute left-0 flex flex-col max-lg:bottom-96 max-md:bottom-0 max-sm:bottom-auto rounded-l-xl bg-white gap-8 md:px-5 lg:px-14 2xl:px-[80px] sm:px-20 px-5 h-[420px] justify-center xl:w-[610px] max-lg:justify-center max-xl:w-full max-xl:rounded-xl rounded-t-xl max-lg:rounded-b-none'>
+          <div className='absolute left-0 flex flex-col max-lg:bottom-96 max-md:bottom-0 max-sm:bottom-auto rounded-l-xl bg-white gap-8 md:px-5 lg:px-14 2xl:px-[80px] sm:px-20 px-5 h-[420px] justify-center xl:w-[610px] max-lg:justify-center max-xl:w-full max-xl:rounded-xl rounded-t-xl max-lg:rounded-b-none max-lg:h-[350px]'>
             <h1 className='font-extrabold text-4xl'>
               Олон улсын зах зээл таныг хүлээж байна
             </h1>
@@ -16,7 +16,7 @@ export const FaqHead = () => {
               Одоо эхлэе <Right />
             </button>
           </div>
-          <div className='max-md:hidden'>
+          <div className='max-md:hidden w-auto'>
             <Telephone />
           </div>
         </div>

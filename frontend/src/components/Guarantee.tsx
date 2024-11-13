@@ -44,7 +44,7 @@ export const Guarantee = () => {
   const [active, setActive] = useState('Экспортын цогц үйлчилгээ');
   return (
     <div className='flex items-center justify-center bg-[#EAEBFA]'>
-      <div className='flex flex-col'>
+      <div className='flex flex-col max-md:pt-20'>
         <div className='flex flex-col items-center justify-end container text-black h-[188px]'>
           <h1 className='font-bold text-4xl'>Бид танд юу өгч чадах вэ?</h1>
           <div className='flex font-semibold text-sm mt-10'>
@@ -59,7 +59,7 @@ export const Guarantee = () => {
                     {elem.name}
                   </button>
                   {active === elem.name && (
-                    <Separator className='h-px bg-[#284CE5] w-full' />
+                    <div className='h-[2px] bg-[#284CE5] w-full'></div>
                   )}
                 </div>
               );
@@ -77,7 +77,9 @@ export const Guarantee = () => {
                 <div className='flex justify-center items-center h-14 w-14 rounded-full bg-white shadow-md border-[#D2D9F9] border'>
                   <IconComponent />
                 </div>
-                <p className='text-black'>{element.desc}</p>
+                <p className='text-black max-sm:overflow-hidden'>
+                  {element.desc}
+                </p>
               </div>
             );
           })}

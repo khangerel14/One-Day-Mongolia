@@ -1,70 +1,124 @@
-import { Plus, Telephone } from '@/images';
+'use client';
+
+import { Minus, Plus } from '@/images';
 import { Separator } from '@radix-ui/react-separator';
 import { FaqHead } from './FaqHead';
+import { useState } from 'react';
 
 const mock = [
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
-    icon: Plus,
-  },
-  {
-    question:
-      'Lorem ipsum dolor sit amet consectetur. Leo adipiscing mauris tempor consequat velit libero. Magna tempor id augue egestas ut interdum.',
-    icon: Plus,
-  },
-  {
-    question:
-      'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
-    icon: Plus,
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
-    icon: Plus,
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
-    icon: Plus,
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
-    icon: Plus,
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
-    icon: Plus,
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
-    icon: Plus,
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
+  },
+  {
+    question:
+      'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
+  },
+  {
+    question:
+      'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
+  },
+  {
+    question:
+      'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
+    accordian:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
+    plus: Plus,
+    minus: Minus,
   },
 ];
 
 export const Faq = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div className='bg-[#F2F5FC]'>
       <FaqHead />
       <div className='flex items-center flex-col mx-auto container lg:w-[800px] w-fit pb-60 gap-12'>
         <h1 className='text-4xl font-bold'>FAQs</h1>
         <div className='flex flex-col gap-4'>
-          {mock.map((elem, index: number) => {
-            const Icoon = elem.icon;
+          {mock.map((elem, index) => {
+            const Icooon = openIndex === index ? Minus : elem.plus;
+            const isOpen = openIndex === index;
             return (
               <div key={index} className='flex flex-col'>
-                <div className='flex items-center p-2'>
-                  <h1 className='font-semibold text-[#181B2C]'>
+                <div
+                  className='flex items-center p-2 justify-between'
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <h1 className='font-semibold text-[#181B2C] h-fit w-[90%]'>
                     {elem.question}
                   </h1>
-                  <button>
-                    <Icoon />
+                  <button onClick={() => toggleAccordion(index)}>
+                    <Icooon />
                   </button>
                 </div>
                 <Separator className='w-full h-px bg-[#D1D3EB]' />
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out text-black${
+                    isOpen
+                      ? 'max-h-[200px] p-4 opacity-100'
+                      : 'max-h-0 p-0 opacity-0'
+                  }`}
+                >
+                  <p>{elem.accordian}</p>
+                </div>
               </div>
             );
           })}
