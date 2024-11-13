@@ -46,3 +46,4 @@ export * from './CarouselThree';
 export * from './CarouselFour';
 export * from './Minus';
 export * from './Hamburger';
+export * from './Close';

@@ -1,6 +1,6 @@
 'use client';
 
-import { Bag, Vector, Contact } from '@/images';
+import { Bag, Vector, Contact, Close } from '@/images';
 import { useRouter } from 'next/navigation';
 
 interface ModalProps {
@@ -13,8 +13,8 @@ export const Modal = ({ open, setOpen }: ModalProps) => {
 
   return (
     <div className='flex flex-col min-h-full h-screen bg-white z-20 p-5 gap-6'>
-      <button className='text-end' onClick={setOpen}>
-        close
+      <button className='flex justify-end' onClick={setOpen}>
+        <Close />
       </button>
       <button
         className='flex gap-2 items-center text-sm font-semibold'
@@ -24,7 +24,7 @@ export const Modal = ({ open, setOpen }: ModalProps) => {
       </button>
       <button
         className='flex gap-2 items-center text-sm font-semibold'
-        onClick={() => router.push('/about-Us')}
+        onClick={() => router.push('/about-us')}
       >
         <Vector /> Бидний тухай
       </button>

@@ -24,7 +24,7 @@ export default function Home() {
       <InfoSection />
       <Supplier />
       <div className='bg-black'>
-        <div className='relative inset-0 bg-black xl:h-[1200px] max-xl:h-[1600px] max-sm:h-[1800px] flex items-end bg-cover mx-auto'>
+        <div className='relative inset-0 bg-black xl:h-[1200px] max-xl:h-[1800px] max-sm:h-[1950px] flex items-end bg-cover mx-auto'>
           <div className='absolute top-32 mx-auto inset-0 h-full max-sm:pb-64'>
             <World />
           </div>

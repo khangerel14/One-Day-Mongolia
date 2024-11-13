@@ -26,13 +26,20 @@ export const Navbar = () => {
             <Hamburger />
           </button>
           <div
-            className='sm:hidden max-md:block w-[85%] fixed top-0 right-0 z-20 transition-transform duration-300'
-            style={{
-              transform: open ? 'translateX(0)' : 'translateX(100%)',
-              transition: 'transform 300ms ease',
-            }}
+            className='w-[100%] bg-opacity-50 bg-black fixed inset-0 z-10'
+            style={{ visibility: open ? 'visible' : 'hidden' }}
+            onClick={openModal}
           >
-            <Modal open={open} setOpen={openModal} />
+            <div
+              className='sm:hidden max-md:block w-[85%] fixed top-0 right-0 z-20 transition-transform duration-300'
+              style={{
+                transform: open ? 'translateX(0)' : 'translateX(100%)',
+                transition: 'transform 300ms ease',
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Modal open={open} setOpen={openModal} />
+            </div>
           </div>
           <div className='flex md:w-[548px] w-[480px] justify-between font-semibold items-center text-[#284CE5] max-sm:hidden'>
             <button
@@ -43,7 +50,7 @@ export const Navbar = () => {
             </button>
             <button
               className='flex gap-2 items-center text-sm font-semibold'
-              onClick={() => router.push('/about-Us')}
+              onClick={() => router.push('/about-us')}
             >
               <Vector /> Бидний тухай
             </button>

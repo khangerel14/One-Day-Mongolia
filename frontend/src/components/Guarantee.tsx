@@ -45,28 +45,29 @@ export const Guarantee = () => {
   return (
     <div className='flex items-center justify-center bg-[#EAEBFA]'>
       <div className='flex flex-col max-md:pt-20'>
-        <div className='flex flex-col items-center justify-end container text-black h-[188px]'>
+        <div className='flex flex-col items-center justify-end container text-black h-[188px] border-b border-[#D6D9EB]'>
           <h1 className='font-bold text-4xl'>Бид танд юу өгч чадах вэ?</h1>
           <div className='flex font-semibold text-sm mt-10'>
-            {buttons.map((elem, index: number) => {
-              return (
-                <div key={index} className='flex flex-col'>
-                  <button
-                    className='p-1 px-4'
-                    onClick={() => setActive(elem.name)}
-                    style={{ color: active === elem.name ? '#284CE5' : '' }}
-                  >
-                    {elem.name}
-                  </button>
-                  {active === elem.name && (
-                    <div className='h-[2px] bg-[#284CE5] w-full'></div>
-                  )}
-                </div>
-              );
-            })}
+            {buttons.map((elem, index: number) => (
+              <div key={index} className='flex flex-col'>
+                <button
+                  className='p-1 px-4 text-sm font-semibold'
+                  onClick={() => setActive(elem.name)}
+                  style={{
+                    color: active === elem.name ? '#284CE5' : '',
+                    transition: 'color 0.3s ease',
+                  }}
+                >
+                  {elem.name}
+                </button>
+                {active === elem.name && (
+                  <div className='h-[2px] bg-[#284CE5] w-fulls'></div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
-        <div className='flex justify-center flex-wrap container mb-20 p-14 gap-3 max-xl:gap-3 mx-auto border-t-2 border-[#D6D9EB]'>
+        <div className='flex justify-center flex-wrap container mb-20 p-14 gap-3 max-xl:gap-3 mx-auto'>
           {mocks.map((element, index: number) => {
             const IconComponent = element.icon;
             return (

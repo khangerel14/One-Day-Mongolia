@@ -1,7 +1,7 @@
 import {
   AboutCarousel,
+  AboutUsFaqHead,
   Exhibition,
-  FaqHead,
   Footer,
   MonProducts,
   Navbar,
@@ -16,7 +16,7 @@ const Page = () => {
       <Project />
       <Exhibition />
       <MonProducts />
-      <FaqHead />
+      <AboutUsFaqHead />
       <Footer />
     </div>
   );

@@ -24,6 +24,9 @@ const config: Config = {
       },
     },
     extend: {
+      gradientColorStopPositions: {
+        50: '55%',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

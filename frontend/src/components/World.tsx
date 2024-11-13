@@ -25,7 +25,7 @@ export const World = () => {
   return (
     <div className='flex justify-between w-full bg-transparent text-white container mx-auto max-xl:h-[1000px] max-xl:flex-col max-xl:gap-10'>
       <div className='flex items-center h-96 xl:w-[547px] w-fit'>
-        <h1 className='font-extralight text-6xl text-start max-xl:text-5xl'>
+        <h1 className='font-extralight sm:text-6xl text-4xl xl:text-start text-center max-xl:text-5xl'>
           Дэлхий яагаад монголын бүтээгдэхүүнийг сонгох вэ?
         </h1>
       </div>

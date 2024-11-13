@@ -70,3 +70,12 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@media (max-width: 800px) {
+  .hidden-under-800px {
+    display: none;
+  }
+  .pt-under-800px {
+    padding-top: 0px;
+  }
+}

@@ -1,7 +1,6 @@
 'use client';
 
 import { YelClothe } from '@/images';
-import { Separator } from '@radix-ui/react-separator';
 import { useState } from 'react';
 
 const mock = [
@@ -19,10 +18,10 @@ const mock = [
   },
 ];
 
-const mocklo = [
+const nature = [
   {
     head: 'Байгальд ээлтэй материал',
-    desc: 'Бид тогтвортой хөгжлийг хангах материал, үйлдвэрлэлийн процессыг илүүд үзэх ба хог хаягдал, эрчим хүчний хэрэглээг багасгадаг ханган нийлүүлэгчдийг нэн тэргүүнд тавьж хамтран ажиллах болно',
+    desc: 'Бид тогтвортой хөгжлийг хангах материал, үйлдвэрлэлийн процессыг илүүд үзэх ба хог, эрчим хүчний ханган нийлүүлэгчдийг нэн тэргүүнд тавьж хамтран ажиллах болно',
   },
   {
     head: 'Нүүрстөрөгчийн ул мөр',
@@ -30,19 +29,82 @@ const mocklo = [
   },
   {
     head: 'Баталгаажуулалт',
-    desc: 'Бид тогтвортой хөгжлийн төлөөх амлалтаа харуулсан ISO стандартын шаардлагууд, органик, гарал үүслийг тодорхойлсон стандарт гэх мэт хүлээн зөвшөөрөгдсөн байгаль орчны гэрчилгээтэй ханган нийлүүлэгчдийг хайж байна.',
+    desc: 'Бид тогтвортой хөгжлийн төлөөх амлалтаа харуулсан ISO, органик, гарал үүслийг тодорхойлсон стандарт гэх мэт зөвшөөрөгдсөн байгаль орчны гэрчилгээтэй ханган нийлүүлэгчдийг хайж байна.',
+  },
+];
+const social = [
+  {
+    head: 'Ээлтэй материал',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima culpa expedita nobis, illum eaque impedit incidunt.',
+  },
+  {
+    head: 'Төрөгчийн ул мөр',
+    desc: 'Бид нийлүүлэгчдийн хүлэмжийн хийн ялгарлыг бууруулах, уур амьсгалд ээлтэй туршлагыг сурталчлах хүчин чармайлтыг үнэлэх болно',
+  },
+  {
+    head: 'Тогтвортой хөгжлийн',
+    desc: 'Oрганик, гарал үүслийг тодорхойлсон стандарт гэх мэт зөвшөөрөгдсөн байгаль орчны гэрчилгээтэй ханган нийлүүлэгчдийг хайж байна.',
+  },
+];
+const economic = [
+  {
+    head: 'Байгалын материал',
+    desc: 'quibusdam blanditiis deleniti reprehenderit ipsum praesentium veniam nemo esse at voluptatibus molestias odit laborum.',
+  },
+  {
+    head: 'Нүүрстөрөгчийн ул мөр',
+    desc: 'Бид нийлүүлэгчдийн хүлэмжийн хийн ялгарлыг бууруулах, уур амьсгалд ээлтэй туршлагыг сурталчлах хүчин чармайлтыг үнэлэх болно',
+  },
+  {
+    head: 'Баталгаажуулалт',
+    desc: 'Бид тогтвортой хөгжлийн төлөөх амлалтаа харуулсан ISO, органик, гарал үүслийг тодорхойлсон стандарт гэх мэт зөвшөөрөгдсөн байгаль орчны гэрчилгээтэй ханган нийлүүлэгчдийг хайж байна.',
+  },
+];
+const others = [
+  {
+    head: 'Байгал дахь материал',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit veniam nemo esse at voluptatibus molestias odit laborum.',
+  },
+  {
+    head: 'Нүүрстөрөгчийн мөрөөр',
+    desc: 'Бид нийлүүлэгчдийн хүлэмжийн хийн ялгарлыг бууруулах, уур амьсгалд ээлтэй туршлагыг сурталчлах хүчин чармайлтыг үнэлэх болно',
+  },
+  {
+    head: 'Баталгаажуулах заавар',
+    desc: 'Бид тогтвортой хөгжлийн төлөөх амлалтаа харуулсан ISO, органик, гарал үүслийг тодорхойлсон стандарт гэх мэт зөвшөөрөгдсөн байгаль орчны гэрчилгээтэй ханган нийлүүлэгчдийг хайж байна.',
   },
 ];
 
 export const Examination = () => {
   const [active, setActive] = useState('Байгаль орчин');
+
+  const convertor = () => {
+    switch (active) {
+      case 'Байгаль орчин':
+        return nature;
+      case 'Нийгмийн хариуцлага':
+        return social;
+      case 'Эдийн засгийн чадамж':
+        return economic;
+      case 'Бусад':
+        return others;
+      default:
+        return [];
+    }
+  };
+
+  const categoryContent = convertor();
   return (
     <div className='bg-white'>
-      <div className='flex flex-col container mx-auto pt-28'>
+      <div className='flex flex-col container mx-auto pt-28 max-sm:pb-10'>
         <div className='flex flex-col gap-10 lg:w-[711px] w-fit'>
           <h1 className='font-bold sm:text-4xl text-3xl'>
             Ханган нийлүүлэгчийг сонгох шалгуур
           </h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima culpa
+          expedita nobis, illum eaque impedit incidunt quibusdam blanditiis
+          deleniti reprehenderit ipsum praesentium veniam nemo esse at
+          voluptatibus molestias odit laborum.
           <p className='text-[#616161] text-sm'>
             Бид нийлүүлэлтийн сүлжээгээрээ тогтвортой байдлыг дэмжих үүрэг
             хүлээдэг. Тогтвортой бүтээгдэхүүнээр ханган нийлүүлэгчдийг сонгохдоо
@@ -50,8 +112,8 @@ export const Examination = () => {
             нийцүүлэхийн тулд дараахи стандарт, шалгуурыг баримталдаг.
           </p>
         </div>
-        <div className='flex flex-col max-lg:hidden'>
-          <div className='flex items-center mx-14'>
+        <div className='flex flex-col max-xl:hidden'>
+          <div className='flex items-center mx-16 pt-14'>
             {mock.map((elem, index: number) => {
               return (
                 <div key={index}>
@@ -92,12 +154,12 @@ export const Examination = () => {
                 </h1>
               </div>
             </div>
-            <div className='flex flex-col mt-3'>
-              {mocklo.map((element, index: number) => {
+            <div className='flex flex-col my-3'>
+              {categoryContent.map((element: any, index: number) => {
                 return (
                   <div className='flex flex-col gap-4 h-[231px]' key={index}>
                     <h1 className='font-bold text-2xl'>{element.head}</h1>
-                    <p className='text-[#616161] text-base h-[160px] overflow-hidden'>
+                    <p className='text-[#616161] text-base h-[162px] overflow-hidden'>
                       {element.desc}
                     </p>
                   </div>

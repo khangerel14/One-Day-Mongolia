@@ -18,3 +18,4 @@ export * from './Exhibition';
 export * from './MonProducts';
 export * from './Modal';
 export * from './CarouselSlider';
+export * from './AboutUsFaqHead';

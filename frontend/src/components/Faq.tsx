@@ -89,8 +89,10 @@ export const Faq = () => {
 
   return (
     <div className='bg-[#F2F5FC]'>
-      <FaqHead />
-      <div className='flex items-center flex-col mx-auto container lg:w-[800px] w-fit pb-60 gap-12'>
+      <div className='pb-20 flex justify-center h-fit max-lg:pt-[400px] max-md:pt-[350px]'>
+        <FaqHead />
+      </div>
+      <div className='flex items-center flex-col mx-auto container lg:w-[800px] w-fit pb-40 gap-12'>
         <h1 className='text-4xl font-bold'>FAQs</h1>
         <div className='flex flex-col gap-4'>
           {mock.map((elem, index) => {

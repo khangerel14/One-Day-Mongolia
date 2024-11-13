@@ -7,14 +7,14 @@ import { useRouter } from 'next/navigation';
 export const LogIn = () => {
   const router = useRouter();
   return (
-    <div className='flex flex-col items-center bg-[#F6F6FE]'>
-      <div className='flex flex-col gap-20 items-center my-20'>
+    <div className='flex flex-col items-center bg-[#F6F6FE] min-h-screen'>
+      <div className='flex flex-col sm:gap-20 gap-10 items-center sm:my-20 mt-10 flex-grow w-full max-h-full'>
         <div className='flex gap-4 items-center'>
           <OneDay />
           <Separator orientation='vertical' className='bg-black h-10' />
           <h1 className='font-medium text-2xl'>Supplier Portal</h1>
         </div>
-        <div className='flex xl:w-[1100px] w-fit sm:h-[720px] h-[600px] rounded-lg bg-cover bg-black'>
+        <div className='flex xl:w-[1100px] w-fit md:h-[720px] h-[600px] rounded-lg bg-cover bg-black'>
           <div className='relative inset-0 w-[395px] overflow-hidden flex justify-center z-10 bg-cover max-lg:hidden rounded-l-lg'>
             <MiniAfrica />
             <div className='absolute top-0 text-white flex flex-col gap-3 p-10'>
@@ -48,7 +48,7 @@ export const LogIn = () => {
               </div>
               <div className='flex flex-col gap-2'>
                 <button
-                  className='md:w-[358px] w-full h-12 py-2 px-4 bg-[#0E3ED0] rounded-lg text-white'
+                  className='md:w-[358px] w-full h-12 py-2 px-4 bg-[#0E3ED0] rounded-lg text-white hover:bg-[#223a83]'
                   onClick={() => router.push('/')}
                 >
                   Нэвтрэх
@@ -58,7 +58,7 @@ export const LogIn = () => {
                   <p className='text-[#5A5D72]'>эсвэл</p>
                   <Separator className='w-[151px]' />
                 </div>
-                <button className='md:w-[358px] w-full h-12 py-2 px-4 bg-white rounded-lg border border-[#0E3ED0] text-[#0E3ED0]'>
+                <button className='md:w-[358px] w-full h-12 py-2 px-4 bg-white rounded-lg border border-[#0E3ED0] text-[#0E3ED0] hover:border-white'>
                   Бүртгүүлэх
                 </button>
               </div>

@@ -93,7 +93,7 @@ export const ContactSec = () => {
                 placeholder='Placeholder'
               ></textarea>
             </div>
-            <button className='flex items-center gap-2 p-3 px-5 rounded-full bg-[#284CE5] text-white w-fit font-bold'>
+            <button className='flex items-center gap-2 p-3 px-5 rounded-full bg-[#284CE5] hover:bg-[#263b97] text-white w-fit font-bold'>
               Илгээх <Telegram />
             </button>
           </div>
