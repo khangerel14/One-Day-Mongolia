@@ -1,9 +1,7 @@
-import { Separator } from '@/components/ui/separator';
-
 const mock = [
   { number: '+13', title: 'Үйлдвэрлэгч' },
   { number: '+745', title: 'EU барааны тэмдэг' },
-  { number: '6542', title: 'Бараа экспортлосон' },
+  { number: '+6542', title: 'Бараа экспортлосон' },
   { number: '+30', title: 'Улсад экспортлосон' },
   { number: '+1M$', title: 'Борлуулалт' },
 ];
@@ -20,7 +18,7 @@ export const Statistics = () => {
                 <p className='text-black'>{element.title}</p>
               </div>
               {index < mock.length - 1 && (
-                <div className='h-16 w-px bg-[#D0D4E8] max-sm:hidden'></div>
+                <div className='h-16 w-px bg-[#D0D4E8] hidden appear'></div>
               )}
             </div>
           );

@@ -1,4 +1,4 @@
-import { Telegram, Fb, LinkedIn, Xlink, Yt, Ins } from '@/images';
+import { Telegram, Fb, LinkedIn, Xlink, Yt, Ins } from '@/assets/icons';
 
 export const ContactSec = () => {
   return (

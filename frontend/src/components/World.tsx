@@ -1,4 +1,4 @@
-import { Chart, Plant } from '@/images';
+import { Chart, Plant } from '@/assets/icons';
 import { Separator } from './ui/separator';
 const mock = [
   {

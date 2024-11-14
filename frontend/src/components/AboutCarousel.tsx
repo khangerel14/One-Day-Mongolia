@@ -1,4 +1,5 @@
-import { Down, EarlyPic } from '@/images';
+import { EarlyPic } from '@/assets/images';
+import { Down } from '@/assets/icons';
 
 export const AboutCarousel = () => {
   return (

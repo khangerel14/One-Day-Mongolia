@@ -5,7 +5,7 @@ import {
   Husug,
   Montulgat,
   Yalguun,
-} from '@/images';
+} from '@/assets/images';
 
 export const Collaborates = () => {
   return (

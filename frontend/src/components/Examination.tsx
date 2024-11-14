@@ -1,6 +1,6 @@
 'use client';
 
-import { YelClothe } from '@/images';
+import { YelClothe } from '@/assets/images';
 import { useState } from 'react';
 
 const mock = [

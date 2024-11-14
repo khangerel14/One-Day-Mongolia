@@ -1,6 +1,6 @@
 'use client';
 
-import { WorldFrame } from '@/images';
+import { WorldFrame } from '@/assets/images';
 import { useRouter } from 'next/navigation';
 
 export const Carousel = () => {

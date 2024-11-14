@@ -11,7 +11,7 @@ import {
   Faq,
   Footer,
 } from '@/components';
-import { Africa } from '@/images/Africa';
+import { Africa } from '@/assets/images/Africa';
 
 export default function Home() {
   return (

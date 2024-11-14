@@ -1,5 +1,4 @@
-import { Partnership, Puzzle, Watering } from '@/images';
-import { title } from 'process';
+import { Partnership, Puzzle, Watering } from '@/assets/icons';
 
 const mock = [
   {

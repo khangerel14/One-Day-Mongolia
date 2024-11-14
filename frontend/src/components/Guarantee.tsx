@@ -1,7 +1,6 @@
 'use client';
 
-import { File, Book, Truck, Check, Bank, Exe } from '@/images';
-import { Separator } from './ui/separator';
+import { File, Book, Truck, Check, Bank, Exe } from '@/assets/icons';
 import { useState } from 'react';
 
 const exported = [

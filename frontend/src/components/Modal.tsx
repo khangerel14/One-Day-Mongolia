@@ -1,6 +1,6 @@
 'use client';
 
-import { Bag, Vector, Contact, Close } from '@/images';
+import { Bag, Vector, Contact, Close } from '@/assets/icons';
 import { useRouter } from 'next/navigation';
 
 interface ModalProps {

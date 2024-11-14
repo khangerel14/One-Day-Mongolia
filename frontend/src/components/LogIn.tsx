@@ -1,6 +1,7 @@
 'use client';
 
-import { MiniAfrica, OneDay } from '@/images';
+import { OneDay } from '@/assets/icons';
+import { MiniAfrica } from '@/assets/images';
 import { Separator } from './ui/separator';
 import { useRouter } from 'next/navigation';
 

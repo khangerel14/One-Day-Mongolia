@@ -1,4 +1,5 @@
-import { Right, Telephone } from '@/images';
+import { Telephone } from '@/assets/images';
+import { Right } from '@/assets/icons';
 
 export const FaqHead = () => {
   return (

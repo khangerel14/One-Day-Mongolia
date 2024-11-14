@@ -1,7 +1,6 @@
 'use client';
 
-import { Minus, Plus } from '@/images';
-import { Separator } from '@radix-ui/react-separator';
+import { Minus, Plus } from '@/assets/icons';
 import { FaqHead } from './FaqHead';
 import { useState } from 'react';
 

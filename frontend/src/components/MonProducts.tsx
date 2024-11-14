@@ -1,4 +1,4 @@
-import { Chrome } from '@/images';
+import { Chrome } from '@/assets/images';
 
 const mock = [
   {

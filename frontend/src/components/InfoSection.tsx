@@ -1,4 +1,4 @@
-import { Deliver, Plane } from '@/images';
+import { Deliver, Plane } from '@/assets/images';
 
 export const InfoSection = () => {
   return (

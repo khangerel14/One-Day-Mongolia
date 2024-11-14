@@ -1,4 +1,4 @@
-import { Location } from '@/images';
+import { Location } from '@/assets/icons';
 import { CarouselSlider } from './CarouselSlider';
 
 export const Exhibition = () => {

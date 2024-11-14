@@ -1,6 +1,6 @@
 'use client';
 
-import { Bag, Contact, Hamburger, OneDay, Vector } from '@/images';
+import { Bag, Contact, Hamburger, OneDay, Vector } from '@/assets/icons';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Modal } from './Modal';

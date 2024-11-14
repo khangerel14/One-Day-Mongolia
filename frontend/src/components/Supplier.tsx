@@ -1,8 +1,7 @@
-import { Right } from '@/images';
-import { Chat } from '@/images/Chat';
-import { GiveGet } from '@/images/GiveGet';
-import { Meet } from '@/images/Meet';
-import { Social } from '@/images/Social';
+import { Right, Social } from '@/assets/icons';
+import { Chat } from '@/assets/icons/Chat';
+import { GiveGet } from '@/assets/icons/GiveGet';
+import { Meet } from '@/assets/icons/Meet';
 
 const mock = [
   {

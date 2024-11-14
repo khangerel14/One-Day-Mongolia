@@ -6,9 +6,8 @@ import CarouselFirst from '@/../public/first.png';
 import CarouselTwo from '@/../public/two.png';
 import CarouselThree from '@/../public/Featured event cover.png';
 import CarouselFour from '@/../public/four.png';
-import { LeftArrow } from '@/images/LeftArrow';
-import { RightArrow } from '@/images/RightArrow';
-import { Carous } from '@/images';
+import { Carous } from '@/assets/images';
+import { LeftArrow, RightArrow } from '@/assets/icons';
 
 const images = [CarouselFirst, CarouselTwo, CarouselThree, CarouselFour];
 
