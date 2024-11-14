@@ -8,7 +8,7 @@ export const LogIn = () => {
   const router = useRouter();
   return (
     <div className='flex flex-col items-center bg-[#F6F6FE] min-h-screen'>
-      <div className='flex flex-col sm:gap-20 gap-10 items-center sm:my-20 mt-10 flex-grow w-full max-h-full'>
+      <div className='flex flex-col sm:gap-20 gap-10 items-center pb-20 mt-10 flex-grow w-full max-h-full'>
         <div className='flex gap-4 items-center'>
           <OneDay />
           <Separator orientation='vertical' className='bg-black h-10' />

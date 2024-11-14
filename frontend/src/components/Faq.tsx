@@ -56,7 +56,7 @@ const mock = [
   },
   {
     question:
-      'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
+      'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odiofae.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
     plus: Plus,
@@ -94,7 +94,7 @@ export const Faq = () => {
       </div>
       <div className='flex items-center flex-col mx-auto container lg:w-[800px] w-fit pb-40 gap-12'>
         <h1 className='text-4xl font-bold'>FAQs</h1>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col'>
           {mock.map((elem, index) => {
             const Icooon = openIndex === index ? Minus : elem.plus;
             const isOpen = openIndex === index;
@@ -111,7 +111,7 @@ export const Faq = () => {
                     <Icooon />
                   </button>
                 </div>
-                <Separator className='w-full h-px bg-[#D1D3EB]' />
+                <div className='w-full h-px bg-[#D1D3EB]'></div>
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out text-black${
                     isOpen

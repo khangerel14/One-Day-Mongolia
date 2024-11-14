@@ -7,6 +7,7 @@ import {
   Navbar,
   Project,
 } from '@/components';
+import React from 'react';
 
 const Page = () => {
   return (

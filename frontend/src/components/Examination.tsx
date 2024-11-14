@@ -101,10 +101,6 @@ export const Examination = () => {
           <h1 className='font-bold sm:text-4xl text-3xl'>
             Ханган нийлүүлэгчийг сонгох шалгуур
           </h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima culpa
-          expedita nobis, illum eaque impedit incidunt quibusdam blanditiis
-          deleniti reprehenderit ipsum praesentium veniam nemo esse at
-          voluptatibus molestias odit laborum.
           <p className='text-[#616161] text-sm'>
             Бид нийлүүлэлтийн сүлжээгээрээ тогтвортой байдлыг дэмжих үүрэг
             хүлээдэг. Тогтвортой бүтээгдэхүүнээр ханган нийлүүлэгчдийг сонгохдоо
@@ -112,13 +108,13 @@ export const Examination = () => {
             нийцүүлэхийн тулд дараахи стандарт, шалгуурыг баримталдаг.
           </p>
         </div>
-        <div className='flex flex-col max-xl:hidden'>
-          <div className='flex items-center mx-16 pt-14'>
+        <div className='flex flex-col'>
+          <div className='flex items-center md:mx-16 pt-14 md:w-[650px] w-full max-md:overflow-x-auto'>
             {mock.map((elem, index: number) => {
               return (
                 <div key={index}>
                   <button
-                    className='flex font-semibold w-full h-5 text-center p-4 mb-4'
+                    className='flex font-semibold md:w-fit max-md:min-w-[214px] justify-center h-1 text-center p-4 mb-4'
                     onClick={() => setActive(elem.category)}
                     style={{ color: active === elem.category ? '#284CE5' : '' }}
                   >
@@ -133,8 +129,8 @@ export const Examination = () => {
           </div>
           <div className='w-full h-px bg-[#D6D9EB]'></div>
         </div>
-        <div className='flex sm:p-14 pt-14 justify-between'>
-          <div className='flex w-[592px] gap-6'>
+        <div className='flex sm:p-14 pt-14 lg:justify-between justify-center gap-10'>
+          <div className='flex w-[512px] gap-6'>
             <div className='flex flex-col'>
               <div className='flex flex-col items-center'>
                 <h1 className='h-14 w-14 flex justify-center items-center border rounded-full drop-shadow-xl font-bold text-3xl border-[#BAC5FF] shadow-inner'>
