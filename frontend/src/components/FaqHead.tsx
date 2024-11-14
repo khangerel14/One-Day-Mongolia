@@ -4,8 +4,8 @@ export const FaqHead = () => {
   return (
     <div className='container mx-auto'>
       <div className='flex items-center h-fit mx-auto max-lg:flex-col mt-[70px] to-bottom'>
-        <div className='flex justify-end relative inset-0 w-full max-lg:flex-col max-lg:h-fit'>
-          <div className='absolute left-0 flex flex-col max-lg:bottom-96 z-20 max-md:bottom-0 max-sm:bottom-auto max-lg:rounded-xl lg:rounded-l-xl bg-white gap-8 2xl:px-[80px] sm:px-20 px-5 max-xl:py-16 justify-center xl:w-[610px] max-lg:justify-center max-md:h-[350px] md:h-[420px]'>
+        <div className='flex justify-end relative items-center inset-0 w-full max-lg:flex-col max-lg:h-fit'>
+          <div className='absolute left-0 flex flex-col max-lg:bottom-96 z-20 max-md:bottom-0 max-sm:bottom-auto max-lg:rounded-t-xl r-xl r-border lg:rounded-l-xl rounded-xl bg-white gap-8 2xl:px-[80px] sm:px-20 px-5 max-xl:py-16 justify-center xl:w-[610px] max-lg:justify-center max-md:h-[350px] md:h-[420px]'>
             <h1 className='font-extrabold xl:w-full md:text-4xl text-3xl'>
               Олон улсын зах зээл таныг хүлээж байна
             </h1>

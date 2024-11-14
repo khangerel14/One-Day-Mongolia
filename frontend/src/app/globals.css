@@ -83,6 +83,12 @@ body {
 @media (min-width: 1150px) {
   .r-xl {
     border-top-right-radius: 0;
-    border-bottom-right-radius: 0.75rem;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1150px) {
+  .r-border {
+    border-radius: 0 1rem 1rem 0;
   }
 }

@@ -2,8 +2,8 @@ import { Telegram, Fb, LinkedIn, Xlink, Yt, Ins } from '@/images';
 
 export const ContactSec = () => {
   return (
-    <div className='bg-[#F2F5FC] py-32'>
-      <div className='flex items-center container mx-auto gap-20 justify-between max-xl:flex-col'>
+    <div className='bg-[#F2F5FC] pb-40 pt-28 min-h-full'>
+      <div className='flex items-center container mx-auto gap-20 justify-between max-xl:flex-col-reverse'>
         <div className='flex flex-col gap-10 lg:w-[482px] w-full max-xl:text-center'>
           <h1 className='text-3xl font-extrabold'>Холбоо барих</h1>
           <div className='flex flex-col gap-6'>

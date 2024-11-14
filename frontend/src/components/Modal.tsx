@@ -24,7 +24,7 @@ export const Modal = ({ open, setOpen }: ModalProps) => {
       </button>
       <button
         className='flex gap-2 items-center text-sm font-semibold'
-        onClick={() => router.push('/about-us')}
+        onClick={() => router.push('/aboutUs')}
       >
         <Vector /> Бидний тухай
       </button>

@@ -4,7 +4,7 @@ import { File, Book, Truck, Check, Bank, Exe } from '@/images';
 import { Separator } from './ui/separator';
 import { useState } from 'react';
 
-const mocks = [
+const exported = [
   {
     icon: File,
     desc: 'Экспорт, импортын худалдааны гэрээ ба экспортонд бэлтгэх үйлчилгээ',
@@ -30,6 +30,32 @@ const mocks = [
     desc: 'Европын холбоонд борлуулалт хийсний татвар, НӨАТ гэх зэрэг нягтлан бодох бүртгэлийн тайлагнал',
   },
 ];
+const sold = [
+  {
+    icon: Exe,
+    desc: 'Европын холбоонд борлуулалт хийсний татвар, НӨАТ гэх зэрэг нягтлан бодох бүртгэлийн тайлагнал',
+  },
+  {
+    icon: Bank,
+    desc: 'Бараагаа борлуулсны төлбөр дамжууах санхүүгийн хэрэгсэл түүний шимтгэл хураамж, банкны шимтгэл хураамж',
+  },
+  {
+    icon: Check,
+    desc: 'Импортлогч улсын гаалийн дүрэм журмын нийцлийг хангах баримт бичгийн үйлчилгээ',
+  },
+  {
+    icon: Truck,
+    desc: 'Экспортын тээвэрлэлтийн үйлчилгээ ',
+  },
+  {
+    icon: Book,
+    desc: 'Экспортын гаалийн баримт бичгийн бүрдлийг хангах үйлчилгээ',
+  },
+  {
+    icon: File,
+    desc: 'Экспорт, импортын худалдааны гэрээ ба экспортонд бэлтгэх үйлчилгээ',
+  },
+];
 
 const buttons = [
   {
@@ -42,6 +68,19 @@ const buttons = [
 
 export const Guarantee = () => {
   const [active, setActive] = useState('Экспортын цогц үйлчилгээ');
+
+  const convertOnCategory = () => {
+    switch (active) {
+      case 'Экспортын цогц үйлчилгээ':
+        return exported;
+      case 'Борлуулалтын цогц үйлчилгээ':
+        return sold;
+      default:
+        return [];
+    }
+  };
+
+  const guaranteed = convertOnCategory();
   return (
     <div className='flex items-center justify-center bg-[#EAEBFA]'>
       <div className='flex flex-col max-md:pt-20'>
@@ -61,14 +100,14 @@ export const Guarantee = () => {
                   {elem.name}
                 </button>
                 {active === elem.name && (
-                  <div className='h-[2px] bg-[#284CE5] w-fulls'></div>
+                  <div className='h-[2px] bg-[#284CE5] w-full'></div>
                 )}
               </div>
             ))}
           </div>
         </div>
         <div className='flex justify-center flex-wrap container mb-20 p-14 gap-3 max-xl:gap-3 mx-auto'>
-          {mocks.map((element, index: number) => {
+          {guaranteed.map((element, index: number) => {
             const IconComponent = element.icon;
             return (
               <div
