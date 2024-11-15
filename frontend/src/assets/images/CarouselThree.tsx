@@ -1,4 +1,4 @@
-import React from '../../../public/Featured event cover.png';
+import React from '../../../public/three.png';
 
 export const CarouselThree = () => {
   return (

@@ -10,72 +10,54 @@ const mock = [
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odiofae.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
   {
     question:
       'Lorem ipsum dolor sit amet consectetur. Ut varius vulputate in integer diam pharetra nunc sollicitudin. Pellentesque mi ultrices ac odio.',
     accordian:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis animi itaque, minus fuga.',
-    plus: Plus,
-    minus: Minus,
   },
 ];
 
@@ -95,7 +77,7 @@ export const Faq = () => {
         <h1 className='text-4xl font-bold'>FAQs</h1>
         <div className='flex flex-col'>
           {mock.map((elem, index) => {
-            const Icooon = openIndex === index ? Minus : elem.plus;
+            const Icooon = openIndex === index ? Minus : Plus;
             const isOpen = openIndex === index;
             return (
               <div key={index} className='flex flex-col'>
